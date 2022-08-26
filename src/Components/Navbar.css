@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.navigation-bar {
+  background-color: #d04379;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navigation-ul {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation-ul a {
+  text-decoration: none;
+  color: white;
+}

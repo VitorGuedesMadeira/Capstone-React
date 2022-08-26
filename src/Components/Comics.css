@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.comics-section {
+  background-color: white;
+  height: 100vh;
+}
+
+.character-comics-title {
+  background-color: #fd5294;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  padding: 20px;
+}
+
+.character-comic {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-title {
+  width: 100%;
+  background-color: #dc4782;
+  color: white;
+  padding: 0 20px;
+}
+
+.character-status {
+  background-color: #d04379;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  padding: 30px;
+}
+
+.character-status:nth-child(even) {
+  background-color: #dc4782;
+}

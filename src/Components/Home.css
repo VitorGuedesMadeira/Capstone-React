@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.characters-section {
+  background-color: white;
+  height: 100vh;
+}
+
+.marvel-characters-title {
+  background-color: #fd5294;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  padding: 20px;
+}
+
+.marvel-characters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.individual-characters-title {
+  width: 100%;
+  background-color: #dc4782;
+  color: white;
+}
+
+.individual-character {
+  background-color: #d04379;
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+}
+
+.individual-character:nth-child(2),
+.individual-character:nth-child(5),
+.individual-character:nth-child(6) {
+  background-color: #dc4782;
+}
