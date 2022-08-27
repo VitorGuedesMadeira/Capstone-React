@@ -1,0 +1,33 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+// First, create the thunk
+export const getHeros = createAsyncThunk(
+  'heros/getHeros',
+  async () => {
+    const timeStamp = '1661492412';
+    const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
+    const md5 = 'dc0d614d9c848f77f7955f9988d47498';
+    const marvel = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}&limit=6`);
+    return marvel.json();
+  },
+);
+
+const initialState = [];
+
+// Then, handle actions in your reducers:
+const herosSlice = createSlice({
+  name: 'heros',
+  initialState,
+  reducers: {
+    // standard reducer logic, with auto-generated action types per reducer
+  },
+  extraReducers: (builder) => {
+    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(getHeros.fulfilled, (state, action) => action.payload.data.results);
+  },
+});
+
+// Action creators are generated for each case reducer function
+export const { herosReducer } = herosSlice.actions;
+
+export default herosSlice.reducer;

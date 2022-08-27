@@ -13,12 +13,38 @@
   background-color: #fd5294;
   width: 100%;
   aspect-ratio: 2 / 1;
-  padding: 20px;
+  display: flex;
+}
+
+.marvel-characters-image {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marvel-characters-text {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .marvel-characters {
   display: flex;
   flex-wrap: wrap;
+}
+
+.character-title {
+  width: 100%;
+  background-color: #d04379;
+  color: white;
+  padding: 0 30px;
 }
 
 .individual-characters-title {

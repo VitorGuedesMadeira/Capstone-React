@@ -9,11 +9,41 @@
   height: 100vh;
 }
 
+.marvel-comics-title {
+  background-color: #fd5294;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+}
+
+.marvel-comics-image {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marvel-comics-text {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.marvel-comics-text p {
+  text-align: right;
+}
+
 .character-comics-title {
   background-color: #fd5294;
   width: 100%;
   aspect-ratio: 2 / 1;
-  padding: 20px;
+  padding: 30px;
 }
 
 .character-comic {
@@ -21,11 +51,11 @@
   flex-wrap: wrap;
 }
 
-.character-title {
+.comics-title {
   width: 100%;
-  background-color: #dc4782;
+  background-color: #d04379;
   color: white;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .character-status {

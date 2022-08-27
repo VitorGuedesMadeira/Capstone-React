@@ -2,13 +2,19 @@ import React from 'react';
 import './Comics.css';
 
 const Comics = () => {
-  const vitor = 'character';
+  const vitor = 'CHARACTER NAME';
 
   return (
     <div className="comics-section">
-      <div className="character-comics-title">{vitor}</div>
+      <div className="marvel-comics-title">
+        <p className="marvel-comics-image">Character image</p>
+        <div className="marvel-comics-text">
+          <p>{vitor}</p>
+          <p>842 views</p>
+        </div>
+      </div>
       <div className="character-comics">
-        <div className="character-title">Character</div>
+        <div className="comics-title">All comics</div>
         <div className="character-status">1</div>
         <div className="character-status">2</div>
         <div className="character-status">3</div>
