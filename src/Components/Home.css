@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,12 +12,12 @@
 }
 
 .characters-section {
-  background-color: white;
-  height: 100vh;
+  background-color: rgb(20, 20, 20);
+  height: 100%;
 }
 
 .marvel-characters-title {
-  background-color: #fd5294;
+  background-image: linear-gradient(to right, black, lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
@@ -22,33 +29,44 @@
 
 .marvel-characters-text {
   width: calc(100% / 2);
+  font-size: 1.3em;
   aspect-ratio: 1 / 1;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  font-family: 'avengers', sans-serif;
 }
 
 .marvel-characters {
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
 }
 
 .character-title {
   width: 100%;
-  background-color: #d04379;
+  background-image: linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
   color: white;
   padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 75px;
+}
+
+.character-title input {
+  height: 35px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  clip-path: polygon(0 100%, 90% 100%, 100% 60%, 100% 0, 10% 0, 0 40%);
 }
 
 .individual-characters-title {
   width: 100%;
-  background-color: #dc4782;
   color: white;
 }
 
@@ -61,7 +79,7 @@
   display: flex;
   flex-wrap: wrap;
   width: calc(100% / 2);
-  background-color: #dc4782;
+  background-color: rgb(20, 20, 20);
 }
 
 .characters-link:nth-child(2),
@@ -74,5 +92,5 @@
 .characters-link:nth-child(17),
 .characters-link:nth-child(18),
 .characters-link:nth-child(21) {
-  background-color: #9c2957;
+  background-color: rgb(40, 0, 0);
 }

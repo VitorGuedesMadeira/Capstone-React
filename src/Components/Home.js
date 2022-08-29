@@ -19,15 +19,15 @@ const Home = () => {
       dispatch(getHerosSearch(query));
     }
   }, [query]);
-  console.log(heros);
+  console.log(heros.data);
 
   return (
     <div className="characters-section">
       <div className="marvel-characters-title">
         <img className="marvel-characters-image" src={marvelImage} alt="marvel-heros" />
         <div className="marvel-characters-text">
-          <p>ALL CHARACTERS</p>
-          <p>heros.</p>
+          <p>CHARACTERS</p>
+          <p>(1562)</p>
         </div>
       </div>
       <div className="marvel-characters">

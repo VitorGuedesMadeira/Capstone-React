@@ -7,14 +7,13 @@ const Comics = () => {
   console.log(location);
   const individualHero = location.state;
   const individualHeroComics = individualHero.comics.items;
-  console.log(individualHeroComics);
 
   return (
     <div className="comics-section">
       <div className="marvel-comics-title">
         <img className="marvel-comics-image" src={`${individualHero.thumbnail.path}.${individualHero.thumbnail.extension}`} alt="superhero" />
         <div className="marvel-comics-text">
-          <p>{individualHero.name}</p>
+          <p className="character-name">{individualHero.name}</p>
           <p>{`ID: ${individualHero.id}`}</p>
         </div>
       </div>

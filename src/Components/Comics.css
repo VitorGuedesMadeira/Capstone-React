@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +17,7 @@
 }
 
 .marvel-comics-title {
-  background-color: #fd5294;
+  background-image: linear-gradient(to right, black, lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
@@ -33,17 +40,21 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.7em;
 }
 
 .marvel-comics-text p {
   text-align: right;
 }
 
-.character-comics-title {
-  background-color: #fd5294;
-  width: 100%;
-  aspect-ratio: 2 / 1;
-  padding: 30px;
+.character-name {
+  font-size: 1.5em;
+}
+
+.character-comics {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
 }
 
 .character-comic {
@@ -53,22 +64,22 @@
 
 .comics-title {
   width: 100%;
-  background-color: #d04379;
+  background-image: linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
   color: white;
   padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 75px;
 }
 
 .character-status {
-  background-color: #d04379;
+  background-color: rgb(40, 0, 0);
   width: 100%;
   aspect-ratio: 4 / 1;
   padding: 30px;
 }
 
 .character-status:nth-child(even) {
-  background-color: #dc4782;
+  background-color: rgb(20, 20, 20);
 }

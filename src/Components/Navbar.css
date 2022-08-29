@@ -5,11 +5,17 @@
   list-style-type: none;
 }
 
+.home-link {
+  font-weight: 900;
+}
+
 .navigation-bar {
-  background-color: #d04379;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
 }
 
 .navigation-ul {
@@ -19,7 +25,7 @@
 
 .navigation-ul a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .nav-logo {
