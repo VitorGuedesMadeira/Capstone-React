@@ -1,34 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getHeros } from '../Redux/HomeReducer/HomeReducer';
+import { Link } from 'react-router-dom';
+import { getHeros, getHerosSearch } from '../Redux/HomeReducer/HomeReducer';
 import './Home.css';
 import Character from './Character';
+import Search from './Search';
+import marvelImage from '../Images/marvelImage.jpg';
 
 const Home = () => {
+  const [query, setQuery] = useState('');
+  const heros = useSelector((state) => state.heros);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getHeros());
-  }, []);
-  const heros = useSelector((state) => state.heros);
+    console.log(query);
+    if (query === '') {
+      dispatch(getHeros());
+    } else {
+      dispatch(getHerosSearch(query));
+    }
+  }, [query]);
   console.log(heros);
 
   return (
     <div className="characters-section">
       <div className="marvel-characters-title">
-        <p className="marvel-characters-image">Marvel Image</p>
+        <img className="marvel-characters-image" src={marvelImage} alt="marvel-heros" />
         <div className="marvel-characters-text">
-          <p>MARVEL</p>
-          <p>1,234 views</p>
+          <p>ALL CHARACTERS</p>
+          <p>heros.</p>
         </div>
       </div>
       <div className="marvel-characters">
-        <div className="character-title">Avengers</div>
-        <div className="individual-character">1</div>
-        <div className="individual-character">2</div>
-        <div className="individual-character">3</div>
-        <div className="individual-character">4</div>
-        <div className="individual-character">5</div>
-        <Character />
+        <div className="character-title">
+          <Search search={(q) => setQuery(q)} />
+        </div>
+        {heros.length ? heros.map((hero) => <Link state={hero} className="characters-link" key={hero.id} to="Comics"><Character newhero={hero} /></Link>) : 'loading'}
       </div>
     </div>
   );

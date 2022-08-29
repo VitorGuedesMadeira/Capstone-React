@@ -1,26 +1,28 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './Comics.css';
 
 const Comics = () => {
-  const vitor = 'CHARACTER NAME';
+  const location = useLocation();
+  console.log(location);
+  const individualHero = location.state;
+  const individualHeroComics = individualHero.comics.items;
+  console.log(individualHeroComics);
 
   return (
     <div className="comics-section">
       <div className="marvel-comics-title">
-        <p className="marvel-comics-image">Character image</p>
+        <img className="marvel-comics-image" src={`${individualHero.thumbnail.path}.${individualHero.thumbnail.extension}`} alt="superhero" />
         <div className="marvel-comics-text">
-          <p>{vitor}</p>
-          <p>842 views</p>
+          <p>{individualHero.name}</p>
+          <p>{`ID: ${individualHero.id}`}</p>
         </div>
       </div>
       <div className="character-comics">
-        <div className="comics-title">All comics</div>
-        <div className="character-status">1</div>
-        <div className="character-status">2</div>
-        <div className="character-status">3</div>
-        <div className="character-status">4</div>
-        <div className="character-status">5</div>
-        <div className="character-status">6</div>
+        <div className="comics-title">
+          {`All comics (${individualHero.comics.available})`}
+        </div>
+        {individualHeroComics.length ? individualHeroComics.map((comic) => <div className="character-status" key={comic.name}>{comic.name}</div>) : <div className="character-status">No comics related</div>}
       </div>
     </div>
   );

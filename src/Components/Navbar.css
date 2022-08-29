@@ -9,7 +9,7 @@
   background-color: #d04379;
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 10px;
 }
 
 .navigation-ul {
@@ -20,4 +20,8 @@
 .navigation-ul a {
   text-decoration: none;
   color: white;
+}
+
+.nav-logo {
+  height: 25px;
 }

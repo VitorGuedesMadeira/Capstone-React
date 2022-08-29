@@ -7,8 +7,19 @@ export const getHeros = createAsyncThunk(
     const timeStamp = '1661492412';
     const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
     const md5 = 'dc0d614d9c848f77f7955f9988d47498';
-    const marvel = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}&limit=6`);
-    return marvel.json();
+    const marvel = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}&limit=6`).then((data) => data.json());
+    return marvel.data.results;
+  },
+);
+
+export const getHerosSearch = createAsyncThunk(
+  'heros/getHerosSearch',
+  async (query) => {
+    const timeStamp = '1661492412';
+    const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
+    const md5 = 'dc0d614d9c848f77f7955f9988d47498';
+    const marvelQuery = await fetch(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
+    return marvelQuery.data.results;
   },
 );
 
@@ -23,7 +34,8 @@ const herosSlice = createSlice({
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
-    builder.addCase(getHeros.fulfilled, (state, action) => action.payload.data.results);
+    builder.addCase(getHeros.fulfilled, (state, action) => action.payload)
+      .addCase(getHerosSearch.fulfilled, (state, action) => action.payload);
   },
 });
 

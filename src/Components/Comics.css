@@ -19,10 +19,10 @@
 .marvel-comics-image {
   width: calc(100% / 2);
   aspect-ratio: 1 / 1;
-  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .marvel-comics-text {
@@ -56,6 +56,10 @@
   background-color: #d04379;
   color: white;
   padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
 
 .character-status {
