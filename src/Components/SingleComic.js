@@ -17,21 +17,21 @@ const SingleComic = () => {
   console.log(comicInfos);
 
   return (
-    <>
+    <div className="background-comic">
       <div className="single-comic-section">
-        <img className="comic-image" src={`${comicInfos.thumbnail.path}.${comicInfos.thumbnail.extension}`} alt="superhero-comic" />
+        <img className="comic-image" src={comicInfos.thumbnail.path ? `${comicInfos.thumbnail.path}.${comicInfos.thumbnail.extension}` : ''} alt="superhero-comic" />
       </div>
       <div className="comic-title">
         {comicInfos.description ? comicInfos.description : 'Comic Status'}
       </div>
-      <ul className="">
+      <ul className="comic-list">
         <li className="character-status">{`Title: ${comicInfos.title ? comicInfos.title : 'Information not found'}`}</li>
         <li className="character-status">{`Id: ${comicInfos.id ? comicInfos.id : 'Information not found'}`}</li>
         <li className="character-status">{`Pages: ${comicInfos.pageCount ? comicInfos.pageCount : 'Information not found'}`}</li>
         <li className="character-status">{`Characters: ${comicInfos.chracters ? comicInfos.characters.available : 'Information not found'}`}</li>
         <li className="character-status">{`Format: ${comicInfos.format ? comicInfos.format : 'Information not found'}`}</li>
       </ul>
-    </>
+    </div>
   );
 };
 

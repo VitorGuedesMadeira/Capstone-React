@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +15,12 @@
 }
 
 .navigation-bar {
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.7);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'avengers', sans-serif;
   font-weight: 900;
 }
 

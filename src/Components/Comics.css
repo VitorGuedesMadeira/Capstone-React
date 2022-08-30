@@ -12,7 +12,8 @@
 }
 
 .comics-section {
-  background-color: white;
+  background-color: rgb(16, 7, 7);
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent, rgb(0, 0, 0, 0.8)), url(../Images/grid-noise.png);
 }
 
 .marvel-comics-title {
@@ -20,6 +21,8 @@
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
+  border-top: 15px solid rgb(0, 0, 0, 0.3);
+  border-bottom: 15px solid rgb(0, 0, 0, 0.3);
 }
 
 .marvel-comics-image {
@@ -57,7 +60,7 @@
 }
 
 .character-description {
-  background-color: black;
+  background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.1), transparent);
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   display: flex;
@@ -78,7 +81,7 @@
 
 .comics-title {
   width: 100%;
-  background-image: radial-gradient(red, black);
+  background-image: linear-gradient(to right, black, red, black);
   color: white;
   padding: 0 30px;
   display: flex;
@@ -98,6 +101,8 @@
   padding: 30px;
   display: flex;
   align-items: center;
+  text-align-last: left;
+  text-decoration: none;
 }
 
 .character-status:nth-child(even) {
@@ -120,6 +125,7 @@
 @media all and (min-width: 768px) {
   .comics-section {
     padding: 105px;
+    padding-bottom: 0;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -129,6 +135,8 @@
   .marvel-comics-title {
     border-radius: 15px;
     overflow: hidden;
+    width: 75%;
+    margin: auto;
   }
 
   .character-name {
@@ -148,6 +156,10 @@
     text-shadow: 0 0 10px white;
   }
 
+  .character-description {
+    font-family: 'Lato', sans-serif;
+  }
+
   .character-status {
     background-color: transparent;
     height: 100px;
@@ -160,6 +172,8 @@
     padding: 30px;
     transition-duration: 0.1s;
     cursor: pointer;
+    text-decoration: none;
+    text-align-last: center;
   }
 
   .character-status:hover {
