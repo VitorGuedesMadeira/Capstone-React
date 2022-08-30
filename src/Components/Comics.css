@@ -13,11 +13,10 @@
 
 .comics-section {
   background-color: white;
-  height: 100vh;
 }
 
 .marvel-comics-title {
-  background-image: linear-gradient(to right, black, lightgray);
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
@@ -29,7 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .marvel-comics-text {
@@ -50,6 +49,21 @@
 
 .character-name {
   font-size: 1.5em;
+  text-shadow: 0 0 5px black;
+}
+
+.character-id {
+  text-shadow: 0 0 5px black;
+}
+
+.character-description {
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .character-comics {
@@ -71,6 +85,10 @@
   align-items: center;
   justify-content: center;
   height: 75px;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.9em;
+  text-shadow: 0 0 10px white;
+  font-weight: 100;
 }
 
 .character-status {
@@ -78,8 +96,86 @@
   width: 100%;
   aspect-ratio: 4 / 1;
   padding: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .character-status:nth-child(even) {
   background-color: rgb(20, 20, 20);
+}
+
+.status-loading {
+  background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+  min-height: calc(100vh - 307.5px);
+  color: white;
+  font-family: 'avengers', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .comics-section {
+    padding: 105px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .marvel-comics-title {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .character-name {
+    font-size: 4.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .character-id {
+    font-size: 2.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .comics-title {
+    background-image: none;
+    font-family: 'avengers', sans-serif;
+    font-weight: 100;
+    text-shadow: 0 0 10px white;
+  }
+
+  .character-status {
+    background-color: transparent;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, transparent, rgb(30, 0, 0), transparent);
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    padding: 30px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+  }
+
+  .character-status:hover {
+    background-image: linear-gradient(to right, transparent, rgb(50, 0, 0), transparent);
+    font-size: 1.1em;
+  }
+
+  .character-status:nth-child(even) {
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent, rgb(20, 20, 20), transparent);
+    transition-duration: 0.1s;
+    cursor: pointer;
+  }
+
+  .character-status:nth-child(even):hover {
+    background-image: linear-gradient(to right, transparent, rgb(40, 20, 20), transparent);
+    font-size: 1.1em;
+  }
 }

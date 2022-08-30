@@ -26,15 +26,17 @@ const Home = () => {
       <div className="marvel-characters-title">
         <img className="marvel-characters-image" src={marvelImage} alt="marvel-heros" />
         <div className="marvel-characters-text">
-          <p>CHARACTERS</p>
-          <p>(1562)</p>
+          <p className="characters-text">CHARACTERS</p>
+          <p className="characters-counter">(1562)</p>
         </div>
       </div>
-      <div className="marvel-characters">
-        <div className="character-title">
-          <Search search={(q) => setQuery(q)} />
+      <div className="testing">
+        <div className="marvel-characters">
+          <div className="character-title">
+            <Search search={(q) => setQuery(q)} />
+          </div>
+          {heros.length ? heros.map((hero) => <Link state={hero} className="characters-link" key={hero.id} to="Comics"><Character newhero={hero} /></Link>) : <div className="loading">Loading...</div>}
         </div>
-        {heros.length ? heros.map((hero) => <Link state={hero} className="characters-link" key={hero.id} to="Comics"><Character newhero={hero} /></Link>) : 'loading'}
       </div>
     </div>
   );

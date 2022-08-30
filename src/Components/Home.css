@@ -13,11 +13,11 @@
 
 .characters-section {
   background-color: rgb(20, 20, 20);
-  height: 100%;
+  min-height: 100%;
 }
 
 .marvel-characters-title {
-  background-image: linear-gradient(to right, black, lightgray);
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
@@ -48,13 +48,23 @@
 
 .character-title {
   width: 100%;
-  background-image: linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
-  color: white;
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
+  background-blend-mode: color-burn;
+  color: rgb(84, 39, 39);
   padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 75px;
+}
+
+.characters-text {
+  text-shadow: 0 0 5px black;
+}
+
+.characters-counter {
+  color: rgb(99, 28, 28);
+  text-shadow: 0 0 5px rgb(255, 255, 255, 0.5);
 }
 
 .character-title input {
@@ -63,6 +73,13 @@
   outline: none;
   border-radius: 5px;
   clip-path: polygon(0 100%, 90% 100%, 100% 60%, 100% 0, 10% 0, 0 40%);
+  font-weight: 600;
+}
+
+.character-title input:hover {
+  background-color: rgb(232, 205, 205);
+  color: red;
+  font-weight: 600;
 }
 
 .individual-characters-title {
@@ -80,6 +97,8 @@
   flex-wrap: wrap;
   width: calc(100% / 2);
   background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
 }
 
 .characters-link:nth-child(2),
@@ -93,4 +112,75 @@
 .characters-link:nth-child(18),
 .characters-link:nth-child(21) {
   background-color: rgb(40, 0, 0);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+}
+
+.loading {
+  background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+  min-height: calc(100vh - 307.5px);
+  color: white;
+  font-family: 'avengers', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .characters-section {
+    padding-top: 105px;
+  }
+
+  .marvel-characters {
+    width: 768px;
+  }
+
+  .marvel-characters-title {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../Images/panoramicAv.jpg);
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .characters-text {
+    font-size: 2.5em;
+  }
+
+  .characters-counter {
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .testing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20) 7%);
+    background-blend-mode: color-burn;
+  }
+
+  .character-title input {
+    padding: 25px 20px;
+  }
+
+  .characters-link {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 4);
+    background-color: rgb(20, 20, 20);
+    background-image: url(../Images/simple-horizontal-light.png);
+    background-blend-mode: color-burn;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .characters-link {
+    width: calc(100% / 5);
+  }
 }

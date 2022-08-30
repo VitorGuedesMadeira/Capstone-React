@@ -3,9 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  transition-duration: 0.5s;
 }
 
 body {
-  width: 375px;
-  background-color: lightblue;
+  background-color: black;
 }

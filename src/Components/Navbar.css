@@ -31,3 +31,18 @@
 .nav-logo {
   height: 25px;
 }
+
+@media all and (min-width: 768px) {
+  .navigation-bar {
+    position: fixed;
+    margin: auto;
+    z-index: 100;
+    width: 700px;
+    left: 50%;
+    top: 10px;
+    margin-left: -350px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px black;
+  }
+}
