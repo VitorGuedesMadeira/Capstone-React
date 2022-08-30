@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.background-comic {
+  background-color: rgb(16, 7, 7);
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent, rgb(0, 0, 0, 0.8)), url(../Images/grid-noise.png);
+}
+
+.single-comic-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  padding-bottom: 70px;
+}
+
+.comic-image {
+  width: 75%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow:
+    0 0 5px rgb(255, 255, 255, 0.5),
+    0 0 35px rgb(255, 255, 255, 0.5),
+    0 0 65px rgb(255, 255, 255, 0.5),
+    0 0 90px rgb(255, 255, 255, 0.5),
+    0 0 150px rgba(255, 0, 0, 0.3);
+}
+
+.character-description {
+  background-image: linear-gradient(to right, transparent, black, transparent);
+}
+
+.comic-description {
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.comic-title {
+  width: 100%;
+  background-image: linear-gradient(to right, black, red, black);
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.9em;
+  text-shadow: 0 0 10px white;
+  font-weight: 100;
+}
+
+.character-status {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+@media all and (min-width: 768px) {
+  .comic-list {
+    padding: 0 105px;
+  }
+
+  .single-comic-section {
+    padding: 105px;
+  }
+
+  .comic-title {
+    background-image: none;
+  }
+
+  .comic-image {
+    width: 40%;
+    animation: comicImage 4.5s;
+  }
+}
+
+@keyframes comicImage {
+  from {
+    opacity: 0;
+    width: 35%;
+  }
+
+  to {
+    opacity: 1;
+    width: 40%;
+  }
+}

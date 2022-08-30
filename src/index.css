@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+body {
+  background-color: black;
+}
