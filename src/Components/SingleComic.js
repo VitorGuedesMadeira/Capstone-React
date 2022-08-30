@@ -8,14 +8,13 @@ import './SingleComic.css';
 const SingleComic = () => {
   const location = useLocation();
   const singleComicUrl = location.state;
-  console.log(location);
   const dispatch = useDispatch();
   const comic = useSelector((state) => state.heros);
-  console.log(singleComicUrl);
   useEffect(() => {
     dispatch(getComic(singleComicUrl));
   }, []);
   const comicInfos = comic[0];
+  console.log(comicInfos);
 
   return (
     <>
@@ -23,14 +22,14 @@ const SingleComic = () => {
         <img className="comic-image" src={`${comicInfos.thumbnail.path}.${comicInfos.thumbnail.extension}`} alt="superhero-comic" />
       </div>
       <div className="comic-title">
-        Title
+        {comicInfos.description ? comicInfos.description : 'Comic Status'}
       </div>
       <ul className="">
-        <li className="character-status">1</li>
-        <li className="character-status">2</li>
-        <li className="character-status">3</li>
-        <li className="character-status">4</li>
-        <li className="character-status">5</li>
+        <li className="character-status">{`Title: ${comicInfos.title ? comicInfos.title : 'Information not found'}`}</li>
+        <li className="character-status">{`Id: ${comicInfos.id ? comicInfos.id : 'Information not found'}`}</li>
+        <li className="character-status">{`Pages: ${comicInfos.pageCount ? comicInfos.pageCount : 'Information not found'}`}</li>
+        <li className="character-status">{`Characters: ${comicInfos.chracters ? comicInfos.characters.available : 'Information not found'}`}</li>
+        <li className="character-status">{`Format: ${comicInfos.format ? comicInfos.format : 'Information not found'}`}</li>
       </ul>
     </>
   );

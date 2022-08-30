@@ -37,13 +37,28 @@
   width: 100%;
   background-image: radial-gradient(red, black);
   color: white;
-  padding: 0 30px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75px;
+  height: 100%;
   font-family: 'avengers', sans-serif;
   font-size: 0.9em;
   text-shadow: 0 0 10px white;
   font-weight: 100;
+}
+
+.character-status {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+@media all and (min-width: 768px) {
+  .single-comic-section {
+    padding: 105px;
+  }
+
+  .comic-image {
+    width: 40%;
+  }
 }
