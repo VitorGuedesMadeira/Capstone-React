@@ -23,6 +23,17 @@ export const getHerosSearch = createAsyncThunk(
   },
 );
 
+export const getComic = createAsyncThunk(
+  'heros/getComic',
+  async (url) => {
+    const timeStamp = '1661492412';
+    const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
+    const md5 = 'dc0d614d9c848f77f7955f9988d47498';
+    const marvelComic = await fetch(`${url}?&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
+    return marvelComic.data.results;
+  },
+);
+
 const initialState = [];
 
 // Then, handle actions in your reducers:
@@ -35,7 +46,8 @@ const herosSlice = createSlice({
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(getHeros.fulfilled, (state, action) => action.payload)
-      .addCase(getHerosSearch.fulfilled, (state, action) => action.payload);
+      .addCase(getHerosSearch.fulfilled, (state, action) => action.payload)
+      .addCase(getComic.fulfilled, (state, action) => action.payload);
   },
 });
 

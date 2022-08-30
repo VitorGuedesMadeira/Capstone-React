@@ -16,7 +16,7 @@
 }
 
 .marvel-comics-title {
-  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, lightgray);
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, black, rgb(39, 3, 3), lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;
@@ -78,7 +78,7 @@
 
 .comics-title {
   width: 100%;
-  background-image: linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
+  background-image: radial-gradient(red, black);
   color: white;
   padding: 0 30px;
   display: flex;

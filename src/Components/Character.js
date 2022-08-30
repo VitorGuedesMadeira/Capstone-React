@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 const Character = (props) => {
   const { newhero } = props;
-  console.log(newhero);
 
   return (
     <>

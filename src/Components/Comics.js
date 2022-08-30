@@ -1,10 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Comics.css';
 
 const Comics = () => {
   const location = useLocation();
-  console.log(location);
   const individualHero = location.state;
   const individualHeroComics = individualHero.comics.items;
 
@@ -24,7 +23,7 @@ const Comics = () => {
         <div className="comics-title">
           {`All comics (${individualHero.comics.available})`}
         </div>
-        {individualHeroComics.length ? individualHeroComics.map((comic) => <Link to="SingleComic"><div className="character-status" key={comic.name}>{comic.name}</div></Link>) : <div className="status-loading">No comics related</div>}
+        {individualHeroComics.length ? individualHeroComics.map((comic) => <Link to="SingleComic" key={`${comic.resourceURI}`} className="character-status" state={comic.resourceURI}><div>{comic.name}</div></Link>) : <div className="status-loading">No comics related</div>}
       </div>
     </div>
   );

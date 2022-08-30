@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.single-comic-section {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.comic-image {
+  width: 75%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow:
+    0 0 5px rgb(255, 255, 255, 0.5),
+    0 0 35px rgb(255, 255, 255, 0.5),
+    0 0 65px rgb(255, 255, 255, 0.5);
+}
+
+.comic-description {
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.comic-title {
+  width: 100%;
+  background-image: radial-gradient(red, black);
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.9em;
+  text-shadow: 0 0 10px white;
+  font-weight: 100;
+}

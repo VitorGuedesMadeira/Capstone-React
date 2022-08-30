@@ -12,12 +12,13 @@
 }
 
 .characters-section {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(238, 238, 238);
+  background-image: url(../Images/grid-noise.png);
   min-height: 100%;
 }
 
 .marvel-characters-title {
-  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, lightgray);
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, black, rgb(39, 3, 3), lightgray);
   width: 100%;
   aspect-ratio: 2 / 1;
   display: flex;

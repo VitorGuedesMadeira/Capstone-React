@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import ComicsPage from './Pages/ComicsPage';
+import SingleComic from './Components/SingleComic';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="Comics" element={<ComicsPage />} />
+          <Route path="Comics/SingleComic" element={<SingleComic />} />
         </Routes>
       </main>
     </>

@@ -12,14 +12,12 @@ const Home = () => {
   const heros = useSelector((state) => state.heros);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(query);
     if (query === '') {
       dispatch(getHeros());
     } else {
       dispatch(getHerosSearch(query));
     }
   }, [query]);
-  console.log(heros.data);
 
   return (
     <div className="characters-section">
@@ -35,7 +33,7 @@ const Home = () => {
           <div className="character-title">
             <Search search={(q) => setQuery(q)} />
           </div>
-          {heros.length ? heros.map((hero) => <Link state={hero} className="characters-link" key={hero.id} to="Comics"><Character newhero={hero} /></Link>) : <div className="loading">Loading...</div>}
+          {heros.length ? heros.map((hero) => <Link state={hero} className="characters-link" key={`heroid-${hero.id}`} to="Comics"><Character newhero={hero} /></Link>) : <div className="loading">Loading...</div>}
         </div>
       </div>
     </div>
