@@ -8,10 +8,14 @@ import './SingleComic.css';
 const SingleComic = () => {
   const location = useLocation();
   const singleComicUrl = location.state;
+  const partOne = singleComicUrl.split('').splice(0, 4);
+  partOne.push('s');
+  const partTwo = singleComicUrl.split('').splice(4);
+  const newUrl = [...partOne, ...partTwo].join('');
   const dispatch = useDispatch();
   const comic = useSelector((state) => state.heros);
   useEffect(() => {
-    dispatch(getComic(singleComicUrl));
+    dispatch(getComic(newUrl));
   }, []);
   const comicInfos = comic[0];
 
