@@ -23,6 +23,7 @@
   display: flex;
   border-top: 15px solid rgb(0, 0, 0, 0.3);
   border-bottom: 15px solid rgb(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .marvel-comics-image {
@@ -32,6 +33,7 @@
   justify-content: center;
   align-items: center;
   clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation: heroAnimation 40s infinite;
 }
 
 .marvel-comics-text {
@@ -140,7 +142,7 @@
   }
 
   .character-name {
-    font-size: 4.5em;
+    font-size: 1.5em;
     text-shadow: 0 0 5px black;
   }
 
@@ -191,5 +193,19 @@
   .character-status:nth-child(even):hover {
     background-image: linear-gradient(to right, transparent, rgb(40, 20, 20), transparent);
     font-size: 1.1em;
+  }
+}
+
+@keyframes heroAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

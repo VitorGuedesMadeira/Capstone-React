@@ -160,6 +160,10 @@
     animation: panoramic 40s infinite;
   }
 
+  .marvel-characters-title:hover {
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url(../Images/panoramicAv.jpg);
+  }
+
   .characters-text {
     font-size: 2.5em;
   }

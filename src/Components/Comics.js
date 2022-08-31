@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Comics.css';
 
@@ -6,6 +6,10 @@ const Comics = () => {
   const location = useLocation();
   const individualHero = location.state;
   const individualHeroComics = individualHero.comics.items;
+
+  useEffect(() => {
+    window.scrollTo(20, 0);
+  });
 
   return (
     <div className="comics-section">

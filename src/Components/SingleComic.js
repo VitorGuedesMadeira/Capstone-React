@@ -15,6 +15,7 @@ const SingleComic = () => {
   const dispatch = useDispatch();
   const comic = useSelector((state) => state.heros);
   useEffect(() => {
+    window.scrollTo(20, 0);
     dispatch(getComic(newUrl));
   }, []);
   const comicInfos = comic[0];

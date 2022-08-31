@@ -17,9 +17,18 @@
   position: absolute;
   font-size: 1em;
   z-index: 1;
-  left: 10px;
-  bottom: 10px;
-  text-shadow: 0 0 5px black, 0 0 6px black, 0 0 7px black;
+  left: 5px;
+  bottom: 25px;
+  text-shadow: 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 15px black;
+}
+
+.how-many-comics {
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  left: 5px;
+  bottom: 5px;
+  text-shadow: 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 15px black;
 }
 
 .hero-image {
