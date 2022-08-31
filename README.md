@@ -20,8 +20,6 @@
 
 > ![](/src/Images/desktopversion1.png)
 > ![](/src/Images/desktopversion2.png)
-> ![](/src/Images/mobileversion1.png)
-
 
 ## Video description
 
