@@ -62,6 +62,10 @@ Feel free to follow me and share any feedback!
 - Hat tip to anyone whose code was used
 - Especial thanks to my friends Mumenya, Raul and Luis who are always open to give me feedbacks
 
+## Design Template
+
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
