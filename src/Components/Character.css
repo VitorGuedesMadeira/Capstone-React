@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.individual-character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+}
+
+.hero-name {
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  left: 5px;
+  bottom: 25px;
+  text-shadow: 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 15px black;
+}
+
+.how-many-comics {
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  left: 5px;
+  bottom: 5px;
+  text-shadow: 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 15px black;
+}
+
+.hero-image {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+}

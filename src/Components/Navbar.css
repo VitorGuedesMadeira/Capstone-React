@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.home-link {
+  font-weight: 900;
+}
+
+.home-link:hover {
+  color: rgb(103, 24, 24);
+}
+
+.navigation-bar {
+  background-color: rgb(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: 'avengers', sans-serif;
+  font-weight: 900;
+}
+
+.navigation-ul {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation-ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-logo {
+  height: 25px;
+}
+
+@media all and (min-width: 768px) {
+  .navigation-bar {
+    position: fixed;
+    margin: auto;
+    z-index: 100;
+    width: 700px;
+    left: 50%;
+    top: 10px;
+    margin-left: -350px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px black;
+  }
+}

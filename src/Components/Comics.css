@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.comics-section {
+  background-color: rgb(16, 7, 7);
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent, rgb(0, 0, 0, 0.8)), url(../Images/grid-noise.png);
+}
+
+.marvel-comics-title {
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, black, rgb(39, 3, 3), lightgray);
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  border-top: 15px solid rgb(0, 0, 0, 0.3);
+  border-bottom: 15px solid rgb(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.marvel-comics-image {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation: heroAnimation 40s infinite;
+}
+
+.marvel-comics-text {
+  width: calc(100% / 2);
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.7em;
+}
+
+.marvel-comics-text p {
+  text-align: right;
+}
+
+.character-name {
+  font-size: 1.5em;
+  text-shadow: 0 0 5px black;
+}
+
+.character-id {
+  text-shadow: 0 0 5px black;
+}
+
+.character-description {
+  background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.1), transparent);
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.character-comics {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.character-comic {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comics-title {
+  width: 100%;
+  background-image: linear-gradient(to right, black, red, black);
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  font-family: 'avengers', sans-serif;
+  font-size: 0.9em;
+  text-shadow: 0 0 10px white;
+  font-weight: 100;
+}
+
+.character-status {
+  background-color: rgb(40, 0, 0);
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  text-align-last: left;
+  text-decoration: none;
+}
+
+.character-status:nth-child(even) {
+  background-color: rgb(20, 20, 20);
+}
+
+.status-loading {
+  background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+  min-height: calc(100vh - 307.5px);
+  color: white;
+  font-family: 'avengers', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .comics-section {
+    padding: 105px;
+    padding-bottom: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .marvel-comics-title {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+  }
+
+  .character-name {
+    font-size: 1.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .character-id {
+    font-size: 2.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .comics-title {
+    background-image: none;
+    font-family: 'avengers', sans-serif;
+    font-weight: 100;
+    text-shadow: 0 0 10px white;
+  }
+
+  .character-description {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .character-status {
+    background-color: transparent;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, transparent, rgb(30, 0, 0), transparent);
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    padding: 30px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    text-decoration: none;
+    text-align-last: center;
+  }
+
+  .character-status:hover {
+    background-image: linear-gradient(to right, transparent, rgb(50, 0, 0), transparent);
+    font-size: 1.1em;
+  }
+
+  .character-status:nth-child(even) {
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent, rgb(20, 20, 20), transparent);
+    transition-duration: 0.1s;
+    cursor: pointer;
+  }
+
+  .character-status:nth-child(even):hover {
+    background-image: linear-gradient(to right, transparent, rgb(40, 20, 20), transparent);
+    font-size: 1.1em;
+  }
+}
+
+@keyframes heroAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.characters-section {
+  background-color: rgb(16, 7, 7);
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent, rgb(0, 0, 0, 0.8)), url(../Images/grid-noise.png);
+  min-height: 100%;
+}
+
+.marvel-characters-title {
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to right, black, black, rgb(39, 3, 3), lightgray);
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  border-top: 10px solid rgb(0, 0, 0, 0.5);
+  border-bottom: 10px solid rgb(0, 0, 0, 0.5);
+}
+
+.marvel-characters-image {
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.marvel-characters-text {
+  width: calc(100% / 2);
+  font-size: 1.3em;
+  aspect-ratio: 1 / 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'avengers', sans-serif;
+}
+
+.marvel-characters {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.character-title {
+  width: 100%;
+  background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20));
+  background-blend-mode: color-burn;
+  color: rgb(84, 39, 39);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+}
+
+.characters-text {
+  text-shadow: 0 0 5px black;
+}
+
+.characters-counter {
+  color: rgb(99, 28, 28);
+  text-shadow: 0 0 5px rgb(255, 255, 255, 0.5);
+}
+
+.character-title input {
+  height: 35px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  clip-path: polygon(0 100%, 90% 100%, 100% 60%, 100% 0, 10% 0, 0 40%);
+  font-weight: 600;
+}
+
+.character-title input:hover {
+  background-color: rgb(232, 205, 205);
+  color: red;
+  font-weight: 600;
+}
+
+.individual-characters-title {
+  width: 100%;
+  color: white;
+}
+
+.individual-character {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.characters-link {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% / 2);
+  background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+}
+
+.characters-link:nth-child(2),
+.characters-link:nth-child(5),
+.characters-link:nth-child(6),
+.characters-link:nth-child(9),
+.characters-link:nth-child(10),
+.characters-link:nth-child(13),
+.characters-link:nth-child(14),
+.characters-link:nth-child(17),
+.characters-link:nth-child(18),
+.characters-link:nth-child(21) {
+  background-color: rgb(40, 0, 0);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+}
+
+.loading {
+  background-color: rgb(20, 20, 20);
+  background-image: url(../Images/simple-horizontal-light.png);
+  background-blend-mode: color-burn;
+  min-height: calc(100vh - 307.5px);
+  color: white;
+  font-family: 'avengers', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-image:hover {
+  box-shadow:
+    0 0 5px rgb(255, 255, 255, 0.7),
+    0 0 15px rgb(255, 255, 255, 0.7),
+    0 0 40px red;
+}
+
+@media all and (min-width: 768px) {
+  .characters-section {
+    padding: 105px 0;
+  }
+
+  .marvel-characters {
+    width: 768px;
+  }
+
+  .marvel-characters-title {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../Images/panoramicAv.jpg);
+    background-position: center top;
+    background-size: cover;
+    border-top: 10px solid rgb(0, 0, 0, 0.5);
+    border-bottom: 10px solid rgb(0, 0, 0, 0.5);
+    animation: panoramic 40s infinite;
+  }
+
+  .marvel-characters-title:hover {
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url(../Images/panoramicAv.jpg);
+  }
+
+  .characters-text {
+    font-size: 2.5em;
+  }
+
+  .characters-counter {
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px black;
+  }
+
+  .testing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../Images/simple-horizontal-light.png), linear-gradient(to bottom, rgb(40, 0, 0), rgb(20, 20, 20) 10%);
+    background-blend-mode: color-burn;
+  }
+
+  .character-title input {
+    padding: 25px 20px;
+  }
+
+  .characters-link {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 3);
+    background-color: rgb(20, 20, 20);
+    background-image: url(../Images/simple-horizontal-light.png);
+    background-blend-mode: color-burn;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .marvel-characters {
+    width: 1024px;
+  }
+
+  .characters-link {
+    width: calc(100% / 4);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .marvel-characters {
+    width: 1200px;
+  }
+
+  .characters-link {
+    width: calc(100% / 5);
+  }
+}
+
+@keyframes panoramic {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 110%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
