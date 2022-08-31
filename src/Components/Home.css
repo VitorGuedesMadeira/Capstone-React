@@ -134,7 +134,7 @@
 
 @media all and (min-width: 768px) {
   .characters-section {
-    padding-top: 105px;
+    padding: 105px 0;
   }
 
   .marvel-characters {
@@ -177,7 +177,7 @@
   .characters-link {
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% / 4);
+    width: calc(100% / 3);
     background-color: rgb(20, 20, 20);
     background-image: url(../Images/simple-horizontal-light.png);
     background-blend-mode: color-burn;
@@ -185,6 +185,20 @@
 }
 
 @media all and (min-width: 1024px) {
+  .marvel-characters {
+    width: 1024px;
+  }
+
+  .characters-link {
+    width: calc(100% / 4);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .marvel-characters {
+    width: 1200px;
+  }
+
   .characters-link {
     width: calc(100% / 5);
   }
