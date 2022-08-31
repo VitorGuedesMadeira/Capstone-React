@@ -23,6 +23,11 @@
 > ![](/src/Images/mobileversion1.png)
 
 
+## Video description
+
+> [click here to check a video description of the project](https://www.loom.com/share/ddad583acc2d498f996519af4e3815e7
+)
+
 ## Setup
 
 - Use the following link for "$ git clone" the repo:
@@ -62,3 +67,7 @@ Feel free to follow me and share any feedback!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+## Mobile Look
+
+> ![](/src/Images/mobileversion1.png)
