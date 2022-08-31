@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'avengers';
+  src: url(../fonts/AvengeroRegular-zvgl.ttf);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
@@ -34,7 +39,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'avengers', sans-serif;
 }
 
 .marvel-characters {
@@ -120,7 +125,7 @@
   background-blend-mode: color-burn;
   min-height: calc(100vh - 307.5px);
   color: white;
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'avengers', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
