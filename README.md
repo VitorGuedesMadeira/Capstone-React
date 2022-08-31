@@ -17,9 +17,11 @@
 - **Linters Check:** Local and Pull Request Github workflows to check for stylistic errors, bugs and syntax errors in code.
 
 ## Quick view
-> ![](src/images/desktopversion1.png)
-> ![](src/images/desktopversion2.png)
-> ![](src/images/mobileversion1.png)
+
+> ![](/src/Images/desktopversion1.png)
+> ![](/src/Images/desktopversion2.png)
+> ![](/src/Images/mobileversion1.png)
+
 
 ## Setup
 
