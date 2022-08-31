@@ -14,7 +14,6 @@ const SingleComic = () => {
     dispatch(getComic(singleComicUrl));
   }, []);
   const comicInfos = comic[0];
-  console.log(comicInfos);
 
   return (
     <div className="background-comic">

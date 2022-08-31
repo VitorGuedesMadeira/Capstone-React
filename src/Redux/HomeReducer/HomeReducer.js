@@ -7,7 +7,7 @@ export const getHeros = createAsyncThunk(
     const timeStamp = '1661492412';
     const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
     const md5 = 'dc0d614d9c848f77f7955f9988d47498';
-    const marvel = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
+    const marvel = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
     return marvel.data.results;
   },
 );
@@ -18,7 +18,7 @@ export const getHerosSearch = createAsyncThunk(
     const timeStamp = '1661492412';
     const publicApiKey = 'e0a86583bfecfc0e5640736439176bd0';
     const md5 = 'dc0d614d9c848f77f7955f9988d47498';
-    const marvelQuery = await fetch(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
+    const marvelQuery = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${timeStamp}&apikey=${publicApiKey}&hash=${md5}`).then((data) => data.json());
     return marvelQuery.data.results;
   },
 );
