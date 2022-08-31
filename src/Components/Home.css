@@ -132,6 +132,13 @@
   width: 100%;
 }
 
+.hero-image:hover {
+  box-shadow:
+    0 0 5px rgb(255, 255, 255, 0.7),
+    0 0 15px rgb(255, 255, 255, 0.7),
+    0 0 40px red;
+}
+
 @media all and (min-width: 768px) {
   .characters-section {
     padding: 105px 0;
@@ -150,6 +157,7 @@
     background-size: cover;
     border-top: 10px solid rgb(0, 0, 0, 0.5);
     border-bottom: 10px solid rgb(0, 0, 0, 0.5);
+    animation: panoramic 40s infinite;
   }
 
   .characters-text {
@@ -201,5 +209,19 @@
 
   .characters-link {
     width: calc(100% / 5);
+  }
+}
+
+@keyframes panoramic {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 110%;
+  }
+
+  100% {
+    background-size: 100%;
   }
 }
