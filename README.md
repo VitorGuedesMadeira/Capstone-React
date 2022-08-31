@@ -64,7 +64,7 @@ Feel free to follow me and share any feedback!
 
 ## Design Template
 
-- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+- I give credit to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 ## 📝 License
 
